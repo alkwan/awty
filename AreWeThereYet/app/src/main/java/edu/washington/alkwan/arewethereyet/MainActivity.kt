@@ -41,6 +41,10 @@ class MainActivity : AppCompatActivity() {
                     val text = "Please make sure the phone number is in the (123) 456-7891 format."
                     val toast = Toast.makeText(this, text, Toast.LENGTH_LONG)
                     toast.show()
+                } else if (editMinutes.text.isEmpty()) {
+                    val text = "Please input a number."
+                    val toast = Toast.makeText(this, text, duration)
+                    toast.show()
                 } else if (editMinutes.text.toString().toInt() <= 0) {
                     val text = "Please input 1 minute or more."
                     val toast = Toast.makeText(this, text, duration)
