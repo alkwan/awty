@@ -47,19 +47,19 @@ class MainActivity : AppCompatActivity() {
 
                 if (editMessage.text.isEmpty()) {
                     val text = "Please include a message to send."
-                    val toast = Toast.makeText(this, text, duration)
+                    val toast = makeText(this, text, duration)
                     toast.show()
                 } else if (!regex.matches(editPhoneNumber.text.toString())) {
                     val text = "Please make sure the phone number is in the (123) 456-7891 format."
-                    val toast = Toast.makeText(this, text, Toast.LENGTH_LONG)
+                    val toast = makeText(this, text, Toast.LENGTH_LONG)
                     toast.show()
                 } else if (editMinutes.text.isEmpty()) {
                     val text = "Please input a number."
-                    val toast = Toast.makeText(this, text, duration)
+                    val toast = makeText(this, text, duration)
                     toast.show()
                 } else if (editMinutes.text.toString().toInt() <= 0) {
                     val text = "Please input 1 minute or more."
-                    val toast = Toast.makeText(this, text, duration)
+                    val toast = makeText(this, text, duration)
                     toast.show()
                 } else {
                     alarmIntent.putExtra("message", editMessage.text.toString())
